@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yawn Detector with Sleepiness Meter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Yawn Detector</h1>
+
+  <div id="container">
+    <video id="webcamVideo" autoplay muted playsinline></video>
+    <canvas id="overlay"></canvas>
+  </div>
+
+  <button id="startBtn">Start Webcam & Yawn Detection</button>
+
+  <div id="status">Yawns detected: 0</div>
+
+  <div id="moodRing">
+    <div id="moodCircle"></div>
+    <div id="moodLabel">Hyperactive Unicorn 🦄</div>
+  </div>
+
+  <!-- Sleepiness Meter -->
+  <div id="sleepinessMeterContainer">
+    <div id="sleepinessMeter"></div>
+    <div id="sleepinessMessage"></div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="yawnSound" src="yawn.mp3" preload="auto"></audio>
+  <audio id="alertBeep" src="beep.mp3" preload="auto"></audio>
+
+  <!-- Sleep Alert -->
+  <div id="sleepMessage" class="hidden">😴 Go to Sleep! 😴</div>
+
+  <!-- face-api.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api/dist/face-api.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
